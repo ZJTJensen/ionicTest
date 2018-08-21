@@ -1,0 +1,8 @@
+{
+  "name": "elietScheduelApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "d10b2efe"
+}
