@@ -1,0 +1,25 @@
+import { StandingsPage } from './../standings/standings';
+import { TeamDetailPage } from './../team-detail/team-detail';
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
+
+@IonicPage()
+@Component({
+  selector: 'page-team-home',
+  templateUrl: 'team-home.html',
+})
+export class TeamHomePage {
+
+  public teamDetailTab = TeamDetailPage;
+  public standingsTab = StandingsPage;
+
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad TeamHomePage');
+  }
+
+}
