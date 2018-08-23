@@ -1,13 +1,16 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Team Home</ion-title>
+  <ion-navbar color="primary">
+    <ion-title> {{team.name}} </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="home()"><ion-icon name="home"></ion-icon></button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-tabs>
-  <ion-tab tabTittle="TEAM" [root]="teamDetailTab" tabIcon="power"></ion-tab>
-  <ion-tab tabTittle="Standings" [root]="standingsTab" tabIcon="podium"></ion-tab>
+  <ion-tab tabTittle="TEAM" [root]="teamDetailTab" [rootParams]="team" tabIcon="power"></ion-tab>
+  <ion-tab tabTittle="Standings" [root]="standingsTab" [rootParams]="team" tabIcon="podium"></ion-tab>
 </ion-tabs>
