@@ -7,12 +7,14 @@ import { myTeamsPage } from './../pages/myTeams/myTeams';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TournamnetsPage } from '../pages/tournamnets/tournamnets';
+import { EliteApi } from '../providers/elite-api/elite-api';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { TournamnetsPage } from '../pages/tournamnets/tournamnets';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -43,7 +46,8 @@ import { TournamnetsPage } from '../pages/tournamnets/tournamnets';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    EliteApi
   ]
 })
 export class AppModule {}

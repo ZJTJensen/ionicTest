@@ -10,8 +10,6 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-item (click)="itemTapped()">Super Smash</button>
-    <button ion-item (click)="itemTapped()">Magic The Gathering</button>
-    <button ion-item (click)="itemTapped()">YUGIOHHHHHHHHH!!!</button>
+    <button  ion-button *ngFor="let item of tournaments" (click)="itemTapped($event, item)">{{item.name}}</button>
   </ion-list>
 </ion-content>
